@@ -30,7 +30,7 @@
 
 
 <p float="left">
-  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="100" />
-  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="100" /> 
-  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="100" />
+  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="33%" />
+  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="33%" /> 
+  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="33%" />
 </p>
