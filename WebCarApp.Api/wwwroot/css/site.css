@@ -1,0 +1,243 @@
+﻿
+
+
+#logoImage {
+    width: 5em;
+    height: 4em;
+    margin-right: 20%;
+}
+
+#testImagesSlider {
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+    z-index: 0;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+.footer {
+        margin-top:35%;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;  
+}
+.MyContainer {
+    width: 86%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*Footer Below*/
+.sec-footer {
+    
+    background: #433d7b;
+    direction: rtl;
+    text-align: right;
+    color: #fff;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+    .sec-footer .desc-box {
+        background: transparent;
+        border: 0;
+    }
+
+        .sec-footer .desc-box .card-title::after {
+            content: ' ';
+            background: #ffffff;
+            display: block;
+            width: 95%;
+            height: 0.2rem;
+            margin-top: 0.3rem;
+        }
+
+        .sec-footer .desc-box .card-text {
+            font-family: iranyekan_light;
+            text-align: justify;
+        }
+
+.sec-sub-footer {
+    background: #f2f2f4;
+    direction: rtl;
+    text-align: right;
+    color: #000;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 0.8rem;
+}
+
+    .sec-sub-footer a {
+        font-size: 0.8rem;
+    }
+
+
+
+/*------------------*/
+.snip1472 {
+    position: relative;
+    font-size: 20px;
+    color: #e6e6e6;
+    width: 45px;
+    margin: 4px;
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    text-align: center;
+    -webkit-perspective: 50em;
+    perspective: 50em;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .snip1472:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: 2px solid #e6e6e6;
+        content: '';
+        z-index: -1;
+        border-radius: 50%;
+    }
+
+    .snip1472:before {
+        color: #fff;
+    }
+
+    .snip1472:before,
+    .snip1472:after {
+        -webkit-transition: all 0.45s ease-in-out;
+        transition: all 0.45s ease-in-out;
+    }
+
+    .snip1472:hover,
+    .snip1472:active,
+    .snip1472.hover {
+        color: #c0392b;
+    }
+
+        .snip1472:hover:after,
+        .snip1472:active:after,
+        .snip1472.hover:after {
+            border-color: #c0392b transparent #c0392b transparent;
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+
+       /*aef*/
+
+
+
+
+.form {
+    transition: all 0.2s;
+    width: 600px;
+    padding: 20px;
+    position: absolute;
+    background: #fff;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    line-height: 2;
+    transform: translate(-50%, -50%);
+}
+
+label {
+    cursor: pointer;
+}
+
+.tags {
+    padding-top: 20px;
+    label{
+    background: #5cb85c;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 10px;
+    border-radius: 3px;
+    display: none;
+    &:after{
+    content: 'x';
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 10px;
+}
+}
+}
+
+#check1:checked ~ .tags label[for="check1"] {
+    display: inline;
+}
+
+#check2:checked ~ .tags label[for="check2"] {
+    display: inline;
+}
+
+#check3:checked ~ .tags label[for="check3"] {
+    display: inline;
+}

@@ -1,0 +1,155 @@
+﻿
+@model WebCarApp.Web.Models.ClientModels.AllClientsViewModel;
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Create" asp-controller="Clients">Add Client<span class="sr-only"></span></a>
+
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort By
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a asp-action="All" asp-route-sortOrder="IdSortParmDesc" class="dropdown-item">ID's From Lower to Upper </a><span class="sr-only" selected></span>
+                    <a asp-action="All" asp-route-sortOrder="IdSortParmAsc" class="dropdown-item">ID's From Upper to Lower  </a><span class="sr-only"></span>
+
+                    <div class="dropdown-divider"></div>
+                    <a asp-action="All" asp-route-sortOrder="NameAsc" class="dropdown-item">Name Ascending </a><span class="sr-only"></span>
+                    <a asp-action="All" asp-route-sortOrder="NameDesc" class="dropdown-item">Name Descending </a><span class="sr-only"></span>
+                    <div class="dropdown-divider"></div>
+                    <a asp-action="All" asp-route-sortOrder="EgnAsc" class="dropdown-item">EGN Ascending</a><span class="sr-only"></span>
+                    <a asp-action="All" asp-route-sortOrder="EgnDesc" class="dropdown-item">EGN Descendig</a><span class="sr-only"></span>
+                    <div class="dropdown-divider"></div>
+
+                </div>
+
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Client by EGN" name="egn" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="clientSearchButton">Search</button>
+            <form id="searchBar" asp-action="Details" method="get">
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<div class="MyContainer">
+    <h1 id="carListText">Clients list: </h1>
+
+    <table class="table table-dark table-striped">
+        <tr>
+            <th>
+                Client ID:
+            </th>
+
+            <th>
+                Client Name:
+            </th>
+            <th>
+                Client EGN:
+            </th>
+            <th>
+                Client Email
+            </th>
+            <th>
+                Client Phone Number
+            </th>
+        </tr>
+
+        @if (Model.Clients is null)
+        {
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <h1>No results</h1>
+                </td>
+            </tr>
+
+        }
+        else
+        {
+
+
+            @foreach (var client in Model.Clients)
+            {
+                <tr>
+                    <td>
+                        @client.Id
+                    </td>
+                    <td>
+                        @client.FirstName @client.LastName
+                    </td>
+                    <td>
+                        @client.EGN
+                    </td>
+                    <td>
+                        @client.Email
+                    </td>
+                    <td>
+                        @client.PhoneNumber
+                    </td>
+                    <td>
+
+                        <a asp-controller="Clients"
+                           asp-action="Edit"
+                           asp-route-id="@client.Id" class="btn btn-secondary"> Edit</a>
+                    </td>
+
+                </tr>
+            }
+        }
+    </table>
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+
+            @if (!Model.PreviousDisabled)
+            {
+                <a href="/Clients/All?page=@Model.PreviousPage&sortOrder=@Model.SortOrder" class="float-left btn btn-outline-info my-2 my-sm-0" style="margin-right:1%;">Previous Page</a>
+            }
+            @if (Model.MaxPage != 1 && Model.MaxPage != 0)
+            {
+
+                @for (int i = 1; i <= Model.MaxPage; i++)
+                {
+                    @if (i > 9)
+                    {
+                        <li class="page-item">
+                            <a class="page-link">...</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="/Clients/All?page=@Model.MaxPage&sortOrder=@Model.SortOrder" class="page-link">@Model.MaxPage</a>
+                        </li>
+                        break;
+                    }
+                    <li class="page-item ">
+                        <a href="/Clients/All?page=@i&sortOrder=@Model.SortOrder" class="page-link ">@i</a>
+                    </li>
+                }
+
+            }
+            @if (!Model.NextDisabled)
+            {
+
+                <a href="/Clients/All?page=@Model.NextPage&sortOrder=@Model.SortOrder" class="float-right btn btn-outline-info my-2 my-sm-0" style="margin-left:1%;">Next Page</a>
+            }
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+<script src="~/js/clientJs.js" asp-append-version="true"></script>

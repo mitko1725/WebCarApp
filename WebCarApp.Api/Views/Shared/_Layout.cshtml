@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebCarApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white static-top">
+            <div class="container">
+                <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/webcarapp.png" id="logoImage">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto" style="font-size:x-large;">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/Home">
+                                Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                     
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main role="main" class="pb-5">
+
+        @RenderBody()
+
+
+    </main>
+
+
+    <footer>
+        <section class="container-fluid sec-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card desc-box">
+                            <div class="card-body">
+                                <div class="card-title">Privacy</div>
+                                <div class="card-text">
+                                    If you want to check our privacy policy you can do it from : <a href="Home/Privacy" style="text-decoration: none">HERE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card desc-box">
+                            <div class="card-body">
+                                <div class="card-title">Contacts</div>
+                                <div class="card-text">
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-phone ml-3"></i>
+                                            <span>0895070366</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-map-marker ml-3"></i>
+                                            <span>Varna, Bulgaria</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <i class="fas fa-envelope-open ml-3"></i>
+                                            <span>mitko1725@yahoo.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <img src="~/webcarapp.png" alt="logo" class="mb-3">
+                        <br class="clearfix">
+                        <a href="#" class="snip1472"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="snip1472"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="snip1472"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="snip1472"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid sec-sub-footer">
+            <div class="container">
+                <div class="row">
+
+                    <h5 style="float:left;"> @DateTime.UtcNow.Year - All rights reserved! Site made by Mitko</h5>
+
+
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

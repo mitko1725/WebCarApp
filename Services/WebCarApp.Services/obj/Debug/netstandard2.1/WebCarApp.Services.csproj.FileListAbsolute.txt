@@ -1,0 +1,16 @@
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Services.deps.json
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Services.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Services.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\obj\Debug\netstandard2.1\WebCarApp.Services.csprojAssemblyReference.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\obj\Debug\netstandard2.1\WebCarApp.Services.AssemblyInfoInputs.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\obj\Debug\netstandard2.1\WebCarApp.Services.AssemblyInfo.cs
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\obj\Debug\netstandard2.1\WebCarApp.Services.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\obj\Debug\netstandard2.1\WebCarApp.Services.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\obj\Debug\netstandard2.1\WebCarApp.Services.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Data.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Models.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Services.Models.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Data.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Services.Models.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\bin\Debug\netstandard2.1\WebCarApp.Models.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services\obj\Debug\netstandard2.1\WebCarApp.Services.csproj.CopyComplete

@@ -1,0 +1,84 @@
+﻿@model WebCarApp.Web.Models.CarModels.AllCarsByMakeViewModel;
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Create">Add new car<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="AllSold">Check Sold Cars<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="All">Back to Cars list<span class="sr-only"></span></a>
+            </li>
+
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search car by Make" name="makeName" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="carSearchButton">Search</button>
+            <form id="searchBar" asp-action="Search" method="get">
+            </form>
+        </div>
+    </div>
+</nav>
+
+@*Using linq in view/ bad practice?*@
+<h1 id="carListByMakeText">All Cars with Make: @Model.Cars.Select(x=>x.Make).First() </h1>
+<div class="MyContainer">
+    <table class="table table-dark table-striped">
+        <tr>
+
+            <th>
+                Car Model:
+            </th>
+            <th>
+                Model Year:
+            </th>
+            <th>
+                Cubic Centimeters:
+            </th>
+            <th>
+                Horse Power:
+            </th>
+            <th>
+                More Details:
+            </th>
+        </tr>
+        @foreach (var car in Model.Cars)
+        {
+            <tr>
+
+                <td>
+                    @car.Model
+                </td>
+                <td>
+                    @car.ModelYear
+                </td>
+                <td>
+                    @car.CubicCentimeters
+                </td>
+                <td>
+                    @car.HorsePower
+
+                </td>
+                <td>
+
+                    <a asp-controller="Cars"
+                       asp-action="Details"
+                       asp-route-id="@car.Id" class="btn btn-secondary"> Details</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+
+</div>
+<script src="~/js/CarSearch.js" asp-append-version="true"></script>

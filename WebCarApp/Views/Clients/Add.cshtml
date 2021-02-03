@@ -1,0 +1,104 @@
+﻿@model WebCarApp.Models.Client;
+@{
+    ViewData["Title"] = "Add";
+}
+
+@if (ViewBag.Section != null)
+{
+    <script>
+        alert("An Error occurred. Please try again.");
+    </script>
+}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="All">Back to Client's list<span class="sr-only"></span></a>
+            </li>
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Client by EGN" name="egn" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="clientSearchButton">Search</button>
+            <form id="searchBar" asp-action="Details" method="get">
+            </form>
+        </div>
+
+    </div>
+
+</nav>
+<div style="        position: relative;
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN8Wxr4dttVvhps6ZSHp81PNHmK_7nTuSZlA&usqp=CAU) center;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+        z-index: 0;">
+    <div style="position: absolute; top: 0; left:0; right:0; bottom: 0; ">&nbsp;</div>
+
+    <h1 class="addNewClientText">
+        Add New Client
+    </h1>
+</div>
+
+
+
+
+
+<div class="container">
+    <hr />
+    <form class="text-center border border-light p-5" asp-action="Add" method="post">
+
+
+        <!-- First Name -->
+
+        <label>First Name</label>
+        <input asp-for="FirstName" class="form-control mb-4" placeholder="First Name" required />
+
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+        <br>
+        <!-- Last Naame -->
+
+        <label>Last Name</label>
+        <input asp-for="LastName" class="form-control mb-4" placeholder="Last Name" required />
+
+        <span asp-validation-for="LastName" class="text-danger"></span>
+        <br>
+
+        <!-- EGN -->
+        <label>EGN</label>
+        <input asp-for="EGN" class="form-control mb-4" placeholder="EGN" required />
+
+        <span asp-validation-for="EGN" class="text-danger"></span>
+        <br>
+        <!-- Phone Number -->
+        <label>Phone Number</label>
+        <input asp-for="PhoneNumber" class="form-control mb-4" placeholder="Phone Number" required />
+
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        <br>
+        <!-- Email -->
+        <label>Email</label>
+        <input asp-for="Email" class="form-control mb-4" placeholder="Email" required />
+
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <br>
+
+
+        <br>
+
+
+        <!-- Send button -->
+        <button class="btn btn-outline-success btn-block" type="submit">Send</button>
+        <br>
+        @Html.ActionLink("Cancel", "All", "Clients", new object { }, new { @class = "btn btn-outline-danger btn-block" })
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<script src="~/js/clientJs.js" asp-append-version="true"></script>

@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<br>
+<hr>
+<br>
+<div class="container">
+
+    <h1>Please select car ID </h1>
+    <form id="searchBar" asp-action="CarData">
+        <div class="form-group">
+            <select class="browser-default custom-select mb-4 float-left" asp-items="ViewBag.SelectCarData" name="carId">
+                <option value="Choose option" disabled></option>
+            </select>
+
+
+            <h4>Choose attributes that you want to get as JSON</h4>
+
+            <label class="d-block">
+              
+                <input type="checkbox" class="mr-1" name="carDataId" value="Id" id="attrCarId">Id
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="carDataPD" value="Production Date">Production Date
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="carDataVIN" value="VIN">VIN
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="carDataPrice" value="Price">Price
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="carDataColor" value="Color">Color
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="carDataModelId" value="ModelId">Model Id
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="carDataEngineId" value="EngineId">Engine Id
+            </label>
+            <br>
+
+            <button class="btn btn-outline-success btn-block" name="getButton" style="display:none;">Get Car Data</button>
+        </div>
+  </form>
+
+
+</div>
+

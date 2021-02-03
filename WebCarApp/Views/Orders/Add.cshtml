@@ -1,0 +1,81 @@
+﻿@model WebCarApp.Web.Models.OrderModels.CreateOrdersViewModel
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Index">Show All Orders<span class="sr-only"></span></a>
+            </li>
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="OrderNumberFormControl" type="search" placeholder="Enter Order Number" name="orderNumber" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="orderSearchButton">Search</button>
+            <form id="searchBar" asp-action="Search" method="get">
+            </form>
+        </div>
+    </div>
+</nav>
+@if (ViewBag.Section != null)
+{
+    <script>
+        alert("@ViewBag.Section");
+    </script>
+}
+
+
+
+<div id="OrderAddleftAside">
+    <div class="content">
+        <h1 class="OrderTitle">Create new Order: </h1>
+
+        <form class="text-center border border-light p-5" asp-action="Add" method="post">
+
+
+            <label>Choose Car:</label>
+            <select class="browser-default custom-select mb-4" asp-items="ViewBag.SelectCarsData" name="carId">
+                <option value="" disabled>Choose option</option>
+
+
+            </select>
+
+
+            <br>
+            <label>Choose Client</label>
+            <select class="browser-default custom-select mb-4" asp-items="ViewBag.SelectClientsData" name="clientId">
+                <option value="" disabled>Choose option</option>
+
+
+            </select>
+            <!-- Purchase Date -->
+
+            <label>Purchase Date</label>
+            <input asp-for="PurchaseDate" class="form-control mb-4" required>
+            <span asp-validation-for="PurchaseDate" class="text-danger"></span>
+            <br>
+            <!-- Car Sticker Price -->
+            <!-- Purchase Price -->
+            <label>Purchase Price</label>
+            <input asp-for="PurchasePrice" class="form-control mb-4" placeholder="Purchase Price" required>
+            <span asp-validation-for="PurchasePrice" class="text-danger"></span>
+            <br>
+
+
+
+            <!-- Send button -->
+            <button class="btn btn-outline-success btn-block" type="submit">Make Order</button>
+            <br>
+            @Html.ActionLink("Cancel", "Index", "Orders", new object { }, new { @class = "btn btn-outline-danger btn-block" })
+        </form>
+        <br>
+        <br>
+        <br>
+    </div>
+
+</div>
+<div id="OrderAddrightAside">
+    <img src="https://s3.medialoot.com/blog-images/abstract-wire-mesh-wave/17.jpg" class="image" style="object-fit: cover;  right: 0px; top: 0px; width: 100%; height: 870px;">
+</div>
+
+<script src="~/js/AddOrders.js" asp-append-version="true"></script>
+<script src="~/js/OrderSearch.js" asp-append-version="true"></script>

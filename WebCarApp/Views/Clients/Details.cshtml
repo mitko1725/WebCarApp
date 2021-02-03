@@ -1,0 +1,173 @@
+﻿@model WebCarApp.Web.Models.ClientModels.DetailsClientViewModel;
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Create">Add new client<span class="sr-only"></span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="All">Back to Clients list<span class="sr-only"></span></a>
+            </li>
+
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Client by EGN" name="egn" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="clientSearchButton">Search</button>
+            <form id="searchBar" asp-action="Details" method="get">
+            </form>
+        </div>
+    </div>
+
+</nav>
+
+
+<br>
+<div class="MyContainer">
+    <div class="container bootstrap snippets bootdey">
+        <div class="row ng-scope">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body text-center">
+                        <div class="pv-lg"><img class="center-block img-responsive img-circle img-thumbnail thumb96" src="https://m2bob-forum.net/wcf/images/avatars/3e/2720-3e546be0b0701e0cb670fa2f4fcb053d4f7e1ba5.jpg" alt="@Model.FirstName"></div>
+                        <h3 class="m0 text-bold">@Model.FirstName @Model.LastName</h3>
+                        <div class="mv-lg">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged.
+                            </p>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                @if (Model.HasOrders)
+                {
+                    <h1 id="clientOrdersText">Client Previous Orders: </h1>
+                }
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-default">
+
+                    <div class="h4 text-center">Client Information</div>
+                    <div class="row pv-lg">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <form class="form-horizontal ng-pristine ng-valid">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Id</label>
+                                    <div class="col-sm-10">
+                                        <div class="alert alert-dark" role="alert">
+                                            @Model.Id
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <div class="alert alert-dark" role="alert">
+                                            <p>@Model.FirstName @Model.LastName</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">EGN</label>
+                                    <div class="col-sm-10">
+                                        <div class="alert alert-dark" role="alert">
+                                            <p>@Model.EGN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <div class="alert alert-dark" role="alert">
+
+                                            <p>@Model.Email</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4">Phone Number</label>
+                                    <div class="col-sm-10">
+                                        <div class="alert alert-dark" role="alert">
+                                            <p>@Model.PhoneNumber</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <label>Change client information here: &nbsp;&nbsp;</label>
+                                        <button class="btn btn-info" type="submit" asp-action="Edit" asp-controller="Clients" asp-route-id="@Model.Id">Update</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (Model.HasOrders)
+    {
+        
+
+        <table class="table table-light table-striped">
+            <tr>
+                <th>
+                    Order Number:
+                </th>
+                <th>
+                    Car:
+                </th>
+             
+                <th>
+                    Purchase Date:
+                </th>
+                <th>
+                    Order Status:
+                </th>
+                <th>
+                    Check All Order Details:
+                </th>
+            </tr>
+            @foreach (var order in Model.AllOrders)
+            {
+                <tr>
+                    <td>
+                        @order.OrderNumber
+                    </td>
+                    <td>
+                        @order.CarMake @order.CarModel
+
+                    </td>
+                
+                    <td>
+                        @order.PurchaseDate
+                    </td>
+                    <td>
+                        @order.OrderStatus
+
+                    </td>
+                    <td>
+
+                        <a asp-controller="Orders"
+                           asp-action="Details"
+                           asp-route-orderNumber="@order.OrderNumber.ToString()" class="btn btn-secondary">Order Details</a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
+</div>
+
+
+<script src="~/js/clientJs.js" asp-append-version="true"></script>

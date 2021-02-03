@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\WebCarApp.Data\WebCarApp.Data.csproj" />
+    <ProjectReference Include="..\Data\WebCarApp.Models\WebCarApp.Models.csproj" />
+    <ProjectReference Include="..\Services\WebCarApp.Services.Models\WebCarApp.Services.Models.csproj" />
+    <ProjectReference Include="..\Services\WebCarApp.Services\WebCarApp.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Partials\" />
+  </ItemGroup>
+
+</Project>

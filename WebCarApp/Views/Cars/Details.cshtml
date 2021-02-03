@@ -1,0 +1,131 @@
+﻿@model WebCarApp.Web.Models.CarModels.DetailsCarsViewModel;
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Create">Add new car<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="AllSold">Check Sold Cars<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="All">Back to Cars list<span class="sr-only"></span></a>
+            </li>
+
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search car by Make" name="makeName" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="carSearchButton">Search</button>
+            <form id="searchBar" asp-action="Search" method="get">
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<div style="        position: relative;
+        background: url(https://i0.wp.com/holtssa.co.za/wp-content/uploads/2018/03/Simoniz_animated_slider2.gif) center;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+        z-index: 0;">
+    <div style="background: rgba(0,0,0,0.3);position: absolute; top: 0; left:0; right:0; bottom: 0; ">&nbsp;</div>
+    <imput type="hidden" class="checkMake">@Model.Make</imput>
+    <h1 style="color: white; font-weight:700; text-align: center; margin: 0; position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   ">
+        @Model.Make &nbsp; @Model.Model
+    </h1>
+</div>
+
+
+<div class="MyContainer">
+    <div class="CarDetailsTable">
+        @if (Model.Make != null)
+        {
+
+            <table class="table table-bordered ">
+                <tbody>
+                    <tr>
+                        <td class="success"><h4>Make:</h4> </td>
+                        <td>@Model.Make</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Model:</h4> </td>
+                        <td>@Model.Model</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Model Year:</h4> </td>
+                        <td>@Model.ModelYear</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Vehicle identification number:</h4> </td>
+                        <td>@Model.VIN</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Transmission:</h4> </td>
+                        <td>@Model.Tranmission</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Fuel Type:</h4> </td>
+                        <td>@Model.FuelType</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Car Color:</h4> </td>
+                        <td>@Model.Color</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Car Price:</h4> </td>
+                        <td>@Model.Price</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="carDetailsText">
+                <h1>
+                    Engine Specification:
+                </h1>
+            </div>
+
+            <table class="table table-bordered ">
+                <tbody>
+                    <tr>
+                        <td class="success"><h4>Cubic Centimeters:</h4> </td>
+                        <td>@Model.CubicCentimeters</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Horse Power:</h4> </td>
+                        <td>@Model.HorsePower</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Model Year:</h4> </td>
+                        <td>@Model.ModelYear</td>
+                    </tr>
+                    <tr>
+                        <td class="success"><h4>Kilowatts:</h4> </td>
+                        <td>@Model.Kilowatt</td>
+                    </tr>
+
+                    <tr>
+                        <td class="success"><h4>Car Photos:</h4> </td>
+
+                        <td><a class="btn btn-outline-primary" href="@ViewBag.PhotosPath" target="_blank">Images Here</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+
+    </div>
+</div>
+
+
+
+<script src="~/js/CarSearch.js" asp-append-version="true"></script>
+<script src="~/js/CarDetails.js" asp-append-version="true"></script>

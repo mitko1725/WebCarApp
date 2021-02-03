@@ -1,0 +1,9 @@
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\bin\Debug\netstandard2.1\WebCarApp.Models.deps.json
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\bin\Debug\netstandard2.1\WebCarApp.Models.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\obj\Debug\netstandard2.1\WebCarApp.Models.csprojAssemblyReference.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\obj\Debug\netstandard2.1\WebCarApp.Models.AssemblyInfoInputs.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\obj\Debug\netstandard2.1\WebCarApp.Models.AssemblyInfo.cs
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\bin\Debug\netstandard2.1\WebCarApp.Models.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\obj\Debug\netstandard2.1\WebCarApp.Models.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\obj\Debug\netstandard2.1\WebCarApp.Models.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Data\WebCarApp.Models\obj\Debug\netstandard2.1\WebCarApp.Models.csproj.CoreCompileInputs.cache

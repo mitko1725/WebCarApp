@@ -1,0 +1,74 @@
+﻿
+.ChatContainer {
+    width: 86%;
+    margin-top:17%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.usernameFloatLeft {
+    width:40%;
+
+}
+#usernameHolder{
+    text-align:center;
+}
+.leftSection{
+    width:50%;
+    float:left;
+}
+.rightSection{
+    width: 50%;
+    float: left;
+}
+
+/*?????*/
+
+
+.theChatContainer {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.theChatContainer::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.theChatContainer img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.theChatContainer img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+.usernameContainer{
+    width:75%;
+}

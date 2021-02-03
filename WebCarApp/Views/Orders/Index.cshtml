@@ -1,0 +1,148 @@
+﻿
+@model WebCarApp.Web.Models.OrderModels.AllOrdersViewModel;
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Add">Create new Order<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Order By
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a asp-action="Index" asp-route-sortOrder="DateSortAsc" class="dropdown-item">Date Ascending</a><span class="sr-only"></span>
+                    <a asp-action="Index" asp-route-sortOrder="DateSortDesc" class="dropdown-item">Date Descending</a><span class="sr-only"></span>
+
+                    <div class="dropdown-divider"></div>
+
+                </div>
+            </li>
+        </ul>
+
+        <div class="form-inline my-2 my-lg-0">
+            <input class="OrderNumberFormControl" type="search" placeholder="Enter Order Number" name="orderNumber" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="orderSearchButton">Search</button>
+            <form id="searchBar" asp-action="Search" method="get">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="MyContainer">
+    <h1 id="carListText">Orders list: </h1>
+
+    <table class="table table-dark table-striped">
+        <tr>
+            <th>
+                Order Number:
+            </th>
+            <th>
+                Car:
+            </th>
+            <th>
+                Client Name:
+            </th>
+            <th>
+                Purchase Date:
+            </th>
+            <th>
+                Order Status:
+            </th>
+            <th>
+                Check All Order Details:
+            </th>
+        </tr>
+        @if (Model.Orders is null)
+        {
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <h1>No results</h1>
+                </td>
+            </tr>
+
+        }
+        else
+        {
+            @foreach (var order in Model.Orders)
+            {
+                <tr>
+                    <td>
+                        @order.OrderNumber
+                    </td>
+                    <td>
+                        @order.CarMake @order.CarModel
+
+                    </td>
+                    <td>
+                        @order.ClientFirstName @order.ClientLastName
+                    </td>
+                    <td>
+                        @order.Purchasedate
+                    </td>
+                    <td>
+                        @order.OrderStatus
+
+                    </td>
+                    <td>
+
+                        <a asp-controller="Orders"
+                           asp-action="Details"
+                           asp-route-orderNumber="@order.OrderNumber.ToString()" class="btn btn-secondary">Order Details</a>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+
+            @if (!Model.PreviousDisabled)
+            {
+                <a href="/Orders/All?page=@Model.PreviousPage&sortOrder=@Model.SortOrder" class="float-left btn btn-outline-info my-2 my-sm-0" style="margin-right:1%;">Previous Page</a>
+            }
+            @if (Model.MaxPage != 1 && Model.MaxPage != 0)
+            {
+
+                @for (int i = 1; i <= Model.MaxPage; i++)
+                {
+                    @if (i > 9)
+                    {
+                        <li class="page-item">
+                            <a class="page-link">...</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="/Orders/All?page=@Model.MaxPage&sortOrder=@Model.SortOrder" class="page-link">@Model.MaxPage</a>
+                        </li>
+                        break;
+                    }
+                    <li class="page-item">
+                        <a href="/Orders/All?page=@i&sortOrder=@Model.SortOrder" class="page-link">@i</a>
+                    </li>
+                }
+
+            }
+            @if (!Model.NextDisabled)
+            {
+
+                <a href="/Orders/All?page=@Model.NextPage&sortOrder=@Model.SortOrder" class="float-right btn btn-outline-info my-2 my-sm-0" style="margin-left:1%;">Next Page</a>
+            }
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/OrderSearch.js" asp-append-version="true"></script>

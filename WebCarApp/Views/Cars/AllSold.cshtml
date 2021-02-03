@@ -1,0 +1,141 @@
+﻿
+@model WebCarApp.Models.CarModels.AllCarsViewModel;
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Create">Add new car<span class="sr-only"></span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="All">Back to available cars list<span class="sr-only"></span></a>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search car by Make" name="makeName" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="carSearchButton">Search</button>
+            <form id="searchBar" asp-action="Search" method="get">
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<h1 id="carListText">Sold cars list: </h1>
+<div class="MyContainer">
+    <table class="table table-dark table-striped">
+        <tr>
+            <th>
+                Car Make:
+            </th>
+            <th>
+                Car Model:
+            </th>
+            <th>
+                Model Year:
+            </th>
+            <th>
+                Cubic Centimeters:
+            </th>
+            <th>
+                Horse Power:
+            </th>
+            <th>
+                More Details:
+            </th>
+        </tr>
+        @if (Model.Cars is null)
+        {
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <h1>No results</h1>
+                </td>
+            </tr>
+
+        }
+        else
+        {
+            @foreach (var car in Model.Cars)
+            {
+                <tr>
+                    <td>
+                        @car.Make
+                    </td>
+                    <td>
+                        @car.Model
+                    </td>
+                    <td>
+                        @car.ModelYear
+                    </td>
+                    <td>
+                        @car.CubicCentimeters
+                    </td>
+                    <td>
+                        @car.HorsePower
+
+                    </td>
+                    <td>
+
+                        <a asp-controller="Cars"
+                           asp-action="Details"
+                           asp-route-id="@car.Id" class="btn btn-secondary"> Details</a>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+
+            @if (!Model.PreviousDisabled)
+            {
+                <a href="/Cars/AllSold?page=@Model.PreviousPage" class="float-left btn btn-outline-info my-2 my-sm-0" style="margin-right:1%;">Previous Page</a>
+            }
+            @if (Model.MaxPage != 1 && Model.MaxPage != 0)
+            {
+
+                @for (int i = 1; i <= Model.MaxPage; i++)
+                {
+                    @if (i > 9)
+                    {
+                        <li class="page-item">
+                            <a class="page-link">...</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="/Cars/AllSold?page=@Model.MaxPage" class="page-link">@Model.MaxPage</a>
+                        </li>
+                        break;
+                    }
+                    <li class="page-item ">
+                        <a href="/Cars/AllSold?page=@i" class="page-link ">@i</a>
+                    </li>
+                }
+
+            }
+            @if (!Model.NextDisabled)
+            {
+
+                <a href="/Cars/AllSold?page=@Model.NextPage" class="float-right btn btn-outline-info my-2 my-sm-0" style="margin-left:1%;">Next Page</a>
+            }
+        </ul>
+    </nav>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+    </div>
+</div>
+<script src="~/js/CarSearch.js" asp-append-version="true"></script>

@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Web Car App Client - Server TEST API</h1>
+    <div class="MyContainer">
+        <p>Choose Controller: </p>
+
+        <select class="browser-default custom-select mb-4 float-left" asp-items="ViewBag.SelectData" name="selectedItem">
+            <option value="Choose option" disabled></option>
+        </select>
+
+        <div class="apiButtons" style="display:none;">
+            <p>Choose Operation: </p>
+            <br>
+            <hr>
+            <br>
+            <button type="button" class="btn btn-info" id="getButton">Get</button>
+            <button type="button" class="btn btn-warning" id="updateButton">Update</button>
+            <button type="button" class="btn btn-secondary" id="postButton">Post</button>
+            <div id="getCar" style="display:none;">
+                @{await Html.RenderPartialAsync("_GetCars");}
+
+            </div>
+            <div id="getClient" style="display:none;">
+                @{await Html.RenderPartialAsync("_GetClients");}
+
+            </div>
+            <div id="getOrder" style="display:none;">
+                @{await Html.RenderPartialAsync("_GetOrders");}
+
+            </div>
+            <div id="updateCar" style="display:none;">
+                <br>
+                <h1>Update Car Data In Progress.</h1>
+
+            </div>
+            <div id="updateClient" style="display:none;">
+                <br>
+                <h1>Update Client Data In Progress.</h1>
+
+            </div>
+            <div id="updateOrder" style="display:none;">
+                <br>
+                <h1>Update Order Data In Progress.</h1>
+
+            </div>
+            <div id="postCar" style="display:none;">
+                <br>
+                <h1>Post Car Data In Progress.</h1>
+
+            </div>
+            <div id="postClient" style="display:none;">
+                <br>
+                <h1>Post Client Data In Progress.</h1>
+
+            </div>
+            <div id="postOrder" style="display:none;">
+                <br>
+                <h1>Post Order Data In Progress.</h1>
+
+            </div>
+            <div id="clientData" style="display:none;">
+
+                <br>
+                <hr>
+                <br>
+                <p class="alert alert-primary" role="alert" id="fullClientData">
+            </div>
+            <div id="orderGetData" style="display:none;">
+
+                <br>
+                <hr>
+                <br>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>

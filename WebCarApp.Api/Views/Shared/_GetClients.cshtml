@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<br>
+<hr>
+<br>
+<div class="container">
+
+    <h1>Please select client ID </h1>
+   
+        <div class="form-group">
+            <select class="browser-default custom-select mb-4 float-left" asp-items="ViewBag.SelectClientData" name="clientId">
+                <option value="Choose option" disabled></option>
+            </select>
+
+
+            <h4>Choose attributes that you want to get as JSON</h4>
+
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="clientData" value="Id"> Id
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="clientData" value="FirstName"> First Name
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="clientData" value="LastName"> Last Name
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="clientData" value="EGN"> EGN
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="clientData" value="Email"> Email
+            </label>
+            <label class="d-block">
+                <input type="checkbox" class="mr-1" name="clientData" value="PhoneNumber"> Phone Number
+            </label>
+
+            <a class="btn btn-outline-success btn-group-vertical" name="getButton" style="display:none;">Get Client Data</a>
+        </div>
+   
+
+</div>
+

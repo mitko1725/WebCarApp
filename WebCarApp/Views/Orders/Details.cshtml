@@ -1,0 +1,169 @@
+﻿@model WebCarApp.Web.Models.OrderModels.OrderDetailsViewModel;
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Add">Create new Order<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Index">Show All Orders<span class="sr-only"></span></a>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="OrderNumberFormControl" type="search" placeholder="Enter Order Number" name="orderNumber" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="orderSearchButton">Search</button>
+            <form id="searchBar" asp-action="Search" method="get">
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<div style="        position: relative;
+        background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-order-system-management-stage-banner-background-lightgeometric-stagestairsorder-systemblue-image_83414.jpg) center;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+        z-index: 0;">
+    <div style="background: rgba(0,0,0,0.3);position: absolute; top: 0; left:0; right:0; bottom: 0; ">&nbsp;</div>
+
+    <h1 style="color: white; font-weight:700; text-align: center; margin: 0; position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);">
+        Order Number:
+        <br>
+        @Model.OrderNumber
+    </h1>
+</div>
+
+
+<div class="MyContainer">
+    <div class="CarDetailsTable">
+        <div id="carDetailsText">
+            <h1>
+                Order Details:
+            </h1>
+        </div>
+
+        <table class="table table-bordered ">
+            <tbody>
+                <tr>
+                    <td class="success"><h4>Order Number:</h4> </td>
+                    <td>@Model.OrderNumber</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Order Status:</h4> </td>
+                    <td>@Model.OrderStatus</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Purchase Date:</h4> </td>
+                    <td>@Model.PurchaseDate</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Purchase Price:</h4> </td>
+                    <td>@Model.PurchasePrice</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div id="carDetailsText">
+            <h1>
+                Car Details:
+            </h1>
+        </div>
+        <table class="table table-bordered ">
+            <tbody>
+                <tr>
+                    <td class="success"><h4>Make:</h4> </td>
+                    <td>@Model.CarDetails.Make</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Model:</h4> </td>
+                    <td>@Model.CarDetails.Model</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Model Year:</h4> </td>
+                    <td>@Model.CarDetails.ModelYear</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Vehicle identification number:</h4> </td>
+                    <td>@Model.CarDetails.VIN</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Transmission:</h4> </td>
+                    <td>@Model.CarDetails.Tranmission</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Fuel Type:</h4> </td>
+                    <td>@Model.CarDetails.FuelType</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Car Color:</h4> </td>
+                    <td>@Model.CarDetails.Color</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Car Price:</h4> </td>
+                    <td>@Model.CarDetails.Price</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Cubic Centimeters:</h4> </td>
+                    <td>@Model.CarDetails.CubicCentimeters</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Horse Power:</h4> </td>
+                    <td>@Model.CarDetails.HorsePower</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Model Year:</h4> </td>
+                    <td>@Model.CarDetails.ModelYear</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Kilowatts:</h4> </td>
+                    <td>@Model.CarDetails.Kilowatt</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div id="carDetailsText">
+            <h1>
+                Client Details:
+            </h1>
+        </div>
+
+        <table class="table table-bordered ">
+            <tbody>
+                <tr>
+                    <td class="success"><h4>Client Name:</h4> </td>
+                    <td>@Model.ClientDetails.FirstName @Model.ClientDetails.LastName</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>EGN:</h4> </td>
+                    <td>@Model.ClientDetails.EGN</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Email:</h4> </td>
+                    <td>@Model.ClientDetails.Email</td>
+                </tr>
+                <tr>
+                    <td class="success"><h4>Phone Number:</h4> </td>
+                    <td>@Model.ClientDetails.PhoneNumber</td>
+                </tr>
+                <tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <!-- you need to include the shieldui css and js assets in order for the charts to work -->
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-glow/all.min.css" />
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+
+  
+
+</div>
+<script src="~/js/OrderSearch.js" asp-append-version="true"></script>

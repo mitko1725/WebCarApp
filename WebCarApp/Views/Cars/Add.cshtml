@@ -1,0 +1,124 @@
+﻿@model WebCarApp.Models.Car
+@*tuk trqbva da dobavq car serviceModel*@
+@*daje tuka trqbva da e car viewModel*@
+@{
+    ViewData["Title"] = "Add";
+}
+
+@if (ViewBag.Section != null)
+{
+    <script>
+        alert("An Error occurred. Please try again.");
+    </script>
+}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="Create">Add new car<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="AllSold">Check Sold Cars<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" asp-action="All">Back to Cars list<span class="sr-only"></span></a>
+            </li>
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search car by Make" name="makeName" required>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="carSearchButton">Search</button>
+            <form id="searchBar" asp-action="Search" method="get">
+            </form>
+        </div>
+    </div>
+
+</nav>
+<div style="        position: relative;
+        background: url(https://cdn3.vectorstock.com/i/1000x1000/32/37/car-icon-with-add-sign-vector-20383237.jpg) center;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+        z-index: 0;">
+
+</div>
+<h1 id="carAddText">
+    Add new car in the list
+</h1>
+<div class="container">
+
+
+
+
+
+
+
+    <hr />
+    <form class="text-center border border-light p-5" asp-action="Add" method="post">
+
+
+        <!-- Car Production Date -->
+        @*<input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">*@
+        <label for="ProductionDate">Production Date</label>
+        <input asp-for="ProductionDate" class="form-control mb-4" type="date" required>
+        <span asp-validation-for="ProductionDate" class="text-danger"></span>
+        <br>
+        <!-- VinNumber -->
+        @*<input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">*@
+        <label>VIN Number</label>
+        <input asp-for="VIN" class="form-control mb-4" placeholder="VIN Number" required>
+        <span asp-validation-for="VIN" class="text-danger"></span>
+        <br>
+
+        <!-- Price -->
+        <label>Price</label>
+        <input asp-for="Price" class="form-control mb-4" placeholder="Price" required>
+        <span asp-validation-for="Price" class="text-danger"></span>
+        <br>
+        <!-- Color -->
+        <label>Color</label>
+        <input asp-for="Color" class="form-control mb-4" placeholder="Color" required>
+        <span asp-validation-for="Color" class="text-danger"></span>
+        <br>
+
+
+        <!-- Subject -->
+
+
+        <label>Choose Car Model</label>
+        <select class="browser-default custom-select mb-4" asp-items="ViewBag.SelectModelsData" name="modelId">
+            <option value="" disabled>Choose option</option>
+
+
+        </select>
+
+
+        <br>
+        <label>Choose Car Engine</label>
+        <select class="browser-default custom-select mb-4" asp-items="ViewBag.SelectEnginesData" name="engineId">
+            <option value="" disabled>Choose option</option>
+
+
+        </select>
+        <br>
+
+
+        <!-- Send button -->
+        <button class="btn btn-outline-success btn-block" type="submit">Send</button>
+        <br>
+        @Html.ActionLink("Cancel", "All", "Cars", new object { }, new { @class = "btn btn-outline-danger btn-block" })
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</div>
+<script src="~/js/CarSearch.js" asp-append-version="true"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/AddCarSignalR.js"></script>

@@ -1,0 +1,4 @@
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\WebCarApp.Logger\obj\Debug\netstandard2.1\WebCarApp.Logger.csprojAssemblyReference.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\WebCarApp.Logger\obj\Debug\netstandard2.1\WebCarApp.Logger.AssemblyInfoInputs.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\WebCarApp.Logger\obj\Debug\netstandard2.1\WebCarApp.Logger.AssemblyInfo.cs
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\WebCarApp.Logger\obj\Debug\netstandard2.1\WebCarApp.Logger.csproj.CoreCompileInputs.cache

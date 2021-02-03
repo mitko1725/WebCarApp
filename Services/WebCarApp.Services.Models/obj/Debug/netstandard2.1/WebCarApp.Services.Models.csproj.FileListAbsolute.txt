@@ -1,0 +1,12 @@
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\bin\Debug\netstandard2.1\WebCarApp.Services.Models.deps.json
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\bin\Debug\netstandard2.1\WebCarApp.Services.Models.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\bin\Debug\netstandard2.1\WebCarApp.Services.Models.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\obj\Debug\netstandard2.1\WebCarApp.Services.Models.AssemblyInfoInputs.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\obj\Debug\netstandard2.1\WebCarApp.Services.Models.AssemblyInfo.cs
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\obj\Debug\netstandard2.1\WebCarApp.Services.Models.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\obj\Debug\netstandard2.1\WebCarApp.Services.Models.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\obj\Debug\netstandard2.1\WebCarApp.Services.Models.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\bin\Debug\netstandard2.1\WebCarApp.Models.dll
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\bin\Debug\netstandard2.1\WebCarApp.Models.pdb
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\obj\Debug\netstandard2.1\WebCarApp.Services.Models.csprojAssemblyReference.cache
+C:\Users\dimitar.sotirov\source\repos\WebCarApp\Services\WebCarApp.Services.Models\obj\Debug\netstandard2.1\WebCarApp.Services.Models.csproj.CopyComplete
