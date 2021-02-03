@@ -20,17 +20,17 @@
 
 <h3>Interface</h3>
 <hr/>
-<img src="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG"/>
+<img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG"/>
 
 
 
 <h5>Cars View</h5>
-<img src="https://github.com/mitko1725/WebCarApp/tree/main/images/cars1.PNG"/>
+<img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/cars1.PNG"/>
 
 
 
 <p float="left">
-  <img src="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG" width="100" />
-  <img src="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG" width="100" /> 
-  <img src="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG" width="100" />
+  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="100" />
+  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="100" /> 
+  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/Intro.PNG" width="100" />
 </p>
