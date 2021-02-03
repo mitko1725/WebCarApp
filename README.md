@@ -1,6 +1,5 @@
 
-# Hello, folks! <img src="https://github.com/mitko1725/WebCarApp/tree/main/images/wave.GIF" width="30px">
-<h1>WebCarApp</h1>
+# Hello, folks! <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/wave.gif" width="30px">
 <h6>First Web Project</h6>
 
 
@@ -26,20 +25,12 @@
 
 
 <h5>Cars View</h5>
-<img src="https://github.com/PlamenMichev/SoftGym/blob/master/images/Chat.PNG?raw=true"/>
+<img src="https://github.com/mitko1725/WebCarApp/tree/main/images/cars1.PNG"/>
 
 
 
-<div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
-        <div class="" style="max-width: 20%; max-height: 20%;">
-            <img src ="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG">
-        </div>
-
-        <div class="" style="max-width: 100%; max-height: 100%;">
-            <img src ="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG">
-        </div>
-
-        <div class="" style="max-width: 20%; max-height: 20%;">
-            <img src ="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG">
-        </div>
-    </div>
+<p float="left">
+  <img src="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG" width="100" />
+  <img src="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG" width="100" /> 
+  <img src="https://github.com/mitko1725/WebCarApp/tree/main/images/Intro.PNG" width="100" />
+</p>
