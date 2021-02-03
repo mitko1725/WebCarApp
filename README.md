@@ -1,7 +1,11 @@
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+
 <h1>WebCarApp</h1>
 <h6>First Web Project</h6>
-
-<hr/>
 
 
 <h3>Built With</h3>
@@ -17,3 +21,8 @@
 <li>JavaScript</li>
 <li>Bootstrap</li>
 </ul>
+
+
+<h3>Interface</h3>
+<hr/>
+<img src="https://github.com/mitko1725/WebCarApp/images/Intro.png"/>SS
