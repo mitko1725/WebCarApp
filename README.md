@@ -37,13 +37,13 @@
   <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/cars1.PNG" width="50%" />
   <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/cars2.PNG" width="50%" /> 
   <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/cars3.PNG" width="50%" />
-  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/carss.PNG" width="50%" />
+  <img src="https://raw.githubusercontent.com/mitko1725/WebCarApp/main/images/cars4.PNG" width="50%" />
 </p>
 
 
 </hr>
 
-<h5>Orders</h5>
+<h5>Clients</h5>
 
 
 <p float="left">
@@ -55,7 +55,7 @@
 
 
 </hr>
-<h5>Clients</h5>
+<h5>Orders</h5>
 
 
 <p float="left">
@@ -67,3 +67,16 @@
 
 
 </hr>
+
+
+<h5>Application Configurations:</h5>
+
+
+<hr/>
+<ul>
+<ul>In order to use Web Car Database, you need to backup WebCarApp2.0.bak file</ul>
+<ul>Check connection string in appsettings.json. If you don't use SQLEXPRESS you should replace "Server=.\SQLEXPRESS..." with "Server=.;...".</ul>
+
+</ul>
+
+
